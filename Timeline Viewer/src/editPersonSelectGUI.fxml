@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="editPersonSelectGUI">
+   <children>
+      <Label fx:id="lbl_EditPerson" layoutX="14.0" layoutY="8.0" text="Edit Person">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_select" layoutX="275.0" layoutY="264.0" mnemonicParsing="false" onAction="#act_select" prefHeight="27.0" prefWidth="110.0" text="Select" />
+      <Button fx:id="btn_cancel" layoutX="155.0" layoutY="264.0" mnemonicParsing="false" onAction="#act_cancel" prefHeight="27.0" prefWidth="110.0" text="Cancel" />
+      <ListView fx:id="listV_persons" editable="true" layoutX="14.0" layoutY="39.0" prefHeight="192.0" prefWidth="372.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="editPersonGUI">
+   <children>
+      <Label fx:id="lbl_EditPerson" layoutX="14.0" layoutY="8.0" text="Edit Person">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_PersonName" layoutX="41.0" layoutY="38.0" prefHeight="17.0" prefWidth="91.0" text="Person name: " />
+      <Label fx:id="lbl_birthDate" layoutX="59.0" layoutY="68.0" text="Birth Date:" />
+      <Label fx:id="lbl_PersonDesc" layoutX="3.0" layoutY="141.0" text="Person Description:" />
+      <TextField fx:id="txtF_personName" disable="true" layoutX="134.0" layoutY="33.0" prefHeight="27.0" prefWidth="235.0" />
+      <TextArea fx:id="txtA_PersonDesc" layoutX="32.0" layoutY="160.0" prefHeight="93.0" prefWidth="339.0" wrapText="true" />
+      <Button fx:id="btn_save" layoutX="275.0" layoutY="264.0" mnemonicParsing="false" onAction="#act_save" prefHeight="27.0" prefWidth="110.0" text="Save" />
+      <Button fx:id="btn_cancel" layoutX="155.0" layoutY="264.0" mnemonicParsing="false" onAction="#act_cancel" prefHeight="27.0" prefWidth="110.0" text="Cancel" />
+      <DatePicker fx:id="DateP_birthDate" layoutX="134.0" layoutY="64.0" prefHeight="27.0" prefWidth="235.0" promptText="dd/mm/yyyy" />
+      <DatePicker fx:id="DateP_deathDate" layoutX="134.0" layoutY="115.0" prefHeight="27.0" prefWidth="235.0" promptText="dd/mm/yyyy" />
+      <Label fx:id="lbl_deathDate" layoutX="51.0" layoutY="119.0" text="Death Date:" />
+      <CheckBox fx:id="ckbox_isAlive" layoutX="134.0" layoutY="94.0" mnemonicParsing="false" onAction="#ckbox_isAlive" text="CheckBox" />
+      <Label fx:id="lbl_isAlive" layoutX="70.0" layoutY="94.0" text="Is Alive?:" />
+   </children>
+</AnchorPane>

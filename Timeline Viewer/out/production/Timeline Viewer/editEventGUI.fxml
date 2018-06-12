@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="editEventGUI">
+   <children>
+      <Label fx:id="lbl_editEvent" layoutX="14.0" layoutY="8.0" text="Edit Event">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_eventName" layoutX="42.0" layoutY="47.0" prefHeight="17.0" prefWidth="85.0" text="Event name: " />
+      <Label fx:id="lbl_EventDate" layoutX="48.0" layoutY="77.0" text="Event Date:" />
+      <Label fx:id="lbl_EventDesc" layoutX="7.0" layoutY="141.0" text="Event Description:" />
+      <Label fx:id="lbl_LinkedPerson" layoutX="29.0" layoutY="105.0" text="Linked person:" />
+      <TextField fx:id="txtF_eventName" layoutX="134.0" layoutY="42.0" prefHeight="27.0" prefWidth="235.0" />
+      <ComboBox fx:id="cmb_linkedPerson" layoutX="134.0" layoutY="102.0" prefHeight="27.0" prefWidth="186.0" />
+      <TextArea fx:id="txtA_eventDesc" layoutX="32.0" layoutY="160.0" prefHeight="93.0" prefWidth="339.0" />
+      <Button fx:id="btn_newPerson" layoutX="323.0" layoutY="102.0" mnemonicParsing="false" onAction="#act_newPerson" text="New" />
+      <Button fx:id="btn_save" layoutX="275.0" layoutY="264.0" mnemonicParsing="false" onAction="#act_save" prefHeight="27.0" prefWidth="110.0" text="Save" />
+      <Button fx:id="btn_cancel" layoutX="155.0" layoutY="264.0" mnemonicParsing="false" onAction="#act_cancel" prefHeight="27.0" prefWidth="110.0" text="Cancel" />
+      <DatePicker fx:id="DateP_eventDate" layoutX="134.0" layoutY="72.0" prefHeight="27.0" prefWidth="235.0" />
+   </children>
+</AnchorPane>

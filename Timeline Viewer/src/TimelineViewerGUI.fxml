@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timelineViewerGUI">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="mItem_open" mnemonicParsing="false" onAction="#act_openTimeline" text="Open" />
+                  <MenuItem fx:id="mItem_save" disable="true" mnemonicParsing="false" onAction="#act_saveTimeline" text="Save" />
+                  <MenuItem fx:id="mItem_new" mnemonicParsing="false" onAction="#act_newTimeline" text="New" />
+            </items>
+          </Menu>
+          <Menu fx:id="menu_event" disable="true" mnemonicParsing="false" text="Event">
+            <items>
+                  <MenuItem fx:id="mItem_newEvent" mnemonicParsing="false" onAction="#act_newEvent" text="New event" />
+              <MenuItem fx:id="mItem_editEvent" mnemonicParsing="false" onAction="#act_editEvent" text="Edit event" />
+                  <MenuItem fx:id="mItem_deleteEvent" mnemonicParsing="false" onAction="#act_deleteEvent" text="Delete event" />
+            </items>
+          </Menu>
+          <Menu fx:id="menu_person" disable="true" mnemonicParsing="false" text="Person">
+            <items>
+              <MenuItem fx:id="mItem_newPerson" mnemonicParsing="false" onAction="#act_newPerson" text="New person" />
+                  <MenuItem fx:id="mItem_editPerson" mnemonicParsing="false" onAction="#act_editPerson" text="Edit Person" />
+                  <MenuItem fx:id="mItem_deletePerson" mnemonicParsing="false" onAction="#act_deletePerson" text="Delete person" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="lbl_eventName" layoutX="22.0" layoutY="48.0" prefHeight="17.0" prefWidth="93.0" text="Event Name: " />
+      <Label fx:id="lbl_eventDate" layoutX="28.0" layoutY="82.0" prefHeight="17.0" prefWidth="82.0" text="Event Date:" />
+      <Label fx:id="lbl_eventDesc" layoutX="22.0" layoutY="111.0" text="Description" />
+      <TextArea fx:id="txtA_eventDesc" editable="false" layoutX="22.0" layoutY="128.0" prefHeight="71.0" prefWidth="557.0" />
+      <Canvas fx:id="canvas_timeline" height="145.0" layoutX="14.0" layoutY="43.0" width="570.0" />
+      <TextField fx:id="txtF_eventName" editable="false" layoutX="104.0" layoutY="43.0" />
+      <TextField fx:id="txtF_eventDate" editable="false" layoutX="104.0" layoutY="77.0" />
+      <Label fx:id="lbl_linkedPerson" layoutX="285.0" layoutY="48.0" text="Linked Person:" />
+      <TextField fx:id="txtF_eventLinkedPerson" editable="false" layoutX="382.0" layoutY="43.0" />
+      <Button fx:id="btn_LinkedPerson" layoutX="551.0" layoutY="43.0" mnemonicParsing="false" onAction="#act_linkedPerson" prefHeight="27.0" prefWidth="28.0" text="&gt;" />
+      <GridPane layoutY="205.0" prefHeight="29.0" prefWidth="600.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="txtF_eventPos" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+            <Button fx:id="btn_firstEvent" disable="true" mnemonicParsing="false" onAction="#act_firstEvent" prefHeight="27.0" prefWidth="110.0" text="First Event" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" />
+            <Button fx:id="btn_previousEvent" disable="true" mnemonicParsing="false" onAction="#act_previousEvent" prefHeight="27.0" prefWidth="110.0" text="Previous Event" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" />
+            <Button fx:id="btn_nextEvent" disable="true" mnemonicParsing="false" onAction="#act_nextEvent" prefHeight="27.0" prefWidth="110.0" text="Next Event" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" />
+            <Button fx:id="btn_lastEvent" disable="true" mnemonicParsing="false" onAction="#act_lastEvent" prefHeight="27.0" prefWidth="110.0" text="Last Event" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
